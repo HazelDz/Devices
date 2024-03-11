@@ -13,9 +13,10 @@ struct DevicesListView: View {
    
     
     var body: some View {
+       
         VStack(alignment: .leading) {
             Text("Devices")
-                .font(.title)
+            .font(.title)
             List(devices, id: \.name) { device in
                 Text("\(device.name) - \(device.description) - \(device.status)")
                 
