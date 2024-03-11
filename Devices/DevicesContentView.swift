@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+   
     @StateObject var deviceManager = DeviceManager()
     @State private var Name = ""
     @State private var Description = ""
@@ -15,6 +16,7 @@ struct ContentView: View {
     @State private var Status = ""
     
     var body: some View {
+       //SplashScreenView()
         VStack {
             HStack {
                 TextField("Device", text: $Name)
@@ -39,7 +41,7 @@ struct ContentView: View {
 struct MyApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashScreenView()
         }
     }
 }
